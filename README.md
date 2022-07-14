@@ -335,3 +335,13 @@ res.send(result);
       .then((res) => res.json())
       .then((data) => {});
 ```
+
+## Count number of array
+
+```Js
+app.get("/billsCount", async (req, res) => {
+    const count = await billCollection.countDocuments();
+    res.send({ count });
+});
+        
+```
