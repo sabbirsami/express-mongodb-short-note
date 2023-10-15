@@ -75,7 +75,7 @@ useEffect(() => {
 ```Js
 app.get("/service/:id", async (req, res) => {
 const id = req.params.id;
-const result = await testCollection.find({ _id: ObjectId(id) }).toArray();
+const result = await testCollection.find({ _id: new ObjectId(id) }).toArray();
 res.send(result);
 });
 ```
@@ -238,7 +238,7 @@ res.send(result);
       const id = req.params.id;
       const service = req.body;
       const result = await testCollection.updateOne(
-        { _id: ObjectId(id) }, // Find Data by query many time query type is "_id: id" Cheack on database
+        { _id: new ObjectId(id) }, // Find Data by query many time query type is "_id: id" Cheack on database
         {
           $set: service, // Set updated Data
         },
@@ -281,7 +281,7 @@ app.patch("/service/:id", async (req, res) => {
 const id = req.params.id;
 const service = req.body;
 const result = await testCollection.updateOne(
-{ _id: id }, // sometime _id:ObjectId(id)
+{ _id: id }, // sometime _id: new ObjectId(id)
 {
 $set: service,
 }
@@ -321,7 +321,7 @@ const updatedData = {
 ```Js
 app.delete("/service/:id", async (req, res) => {
 const id = req.params.id;
-const result = await testCollection.deleteOne({ _id: ObjectId(id) });
+const result = await testCollection.deleteOne({ _id: new ObjectId(id) });
 res.send(result);
 });
 ```
