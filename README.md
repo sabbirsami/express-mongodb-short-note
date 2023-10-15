@@ -32,9 +32,9 @@ async function run() {
     // await client.close();
   }
 }
-// Call the fuction you decleare abobe
+// Call the function you declare abobe
 run().catch(console.dir);
-// Root Api to cheack activity
+// Root Api to check activity
 app.get("/", (req, res) => {
   res.send("Hello From NR Computers!");
 });
@@ -43,11 +43,11 @@ app.listen(port, () => {
 });
 ```
 
-## Get Methood
+## Get Method
 
 [Got to top](#let-start-express)
 
-### Get/Access all data from mongodb database
+### Get/Access all data from MongoDB database
 
 `Server Site Code`
 
@@ -68,7 +68,7 @@ useEffect(() => {
     }, []);
 ```
 
-## Get/Access Spacific data from mongodb database with id/email
+## Get/Access Specific data from Mongodb database with id/email
 
 `Server Site Code`
 
@@ -90,7 +90,7 @@ fetch(`http://localhost:5000/service/${id}`)
 }, []);
 ```
 
-## Get/Access Spacific data from mongodb database with multiple query
+## Get/Access Specific data from MongoDB database with multiple queries
 
 `Server Site Code`
 
@@ -120,7 +120,7 @@ res.send(result);
     }, []);
 ```
 
-## Get/Access Limited data from mongodb database after find with query
+## Get/Access Limited data from the MongoDB database after finding the query
 
 `Server Site Code`
 
@@ -143,11 +143,11 @@ res.send(result);
     }, []);
 ```
 
-## Post Methood
+## Post Method
 
 [Got to top](#let-start-express)
 
-### Post data without cheack on mongodb database
+### Post data without checking on MongoDB database
 
 `Server Site Code`
 
@@ -163,7 +163,7 @@ res.send(result);
 
 ```Js
     const newData = {
-      // stroe new Data in Object here
+      // store new Data in Object here
       name: "",
       price: "",
     };
@@ -181,7 +181,7 @@ res.send(result);
       });
 ```
 
-### Post data With cheack in mongodb database. Batter to use Put Methood for this task
+### Post data With check-in Mongodb database. Batter to use Put Methood for this task
 
 `Server Site Code`
 
@@ -225,11 +225,11 @@ res.send(result);
       });
 ```
 
-## Put Methood
+## Put Method
 
 [Got to top](#let-start-express)
 
-### Update & insert Data on database by id/email/otherQuery
+### Update & insert Data on the database by id/email/otherQuery
 
 `Server site Code`
 
@@ -268,7 +268,7 @@ role: "",
       });
 ```
 
-## Patch Methood
+## Patch Method
 
 [Got to top](#let-start-express)
 
@@ -310,11 +310,11 @@ const updatedData = {
       });
 ```
 
-## Delete Methood
+## Delete Method
 
 [Got to top](#let-start-express)
 
-### Delete Data form mongodb Database by id
+### Delete Data from MongoDB Database by id
 
 `Server site code`
 
@@ -336,7 +336,7 @@ res.send(result);
       .then((data) => {});
 ```
 
-## Count number of array
+## Count the number of arrays
 
 ```Js
 app.get("/billsCount", async (req, res) => {
